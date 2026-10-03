@@ -1,0 +1,29 @@
+FROM oven/bun:latest
+
+# Install cron
+RUN apt-get update && apt-get install -y cron
+
+# Set a consistent working directory
+WORKDIR /app
+
+# Copy package.json and lockfiles
+COPY hono/package.json hono/bun.lock ./hono/
+
+# Install hono dependencies
+WORKDIR /app/hono
+RUN bun install
+COPY hono/src ./src
+COPY hono/tsconfig.json .
+
+# Create a startup script
+RUN echo '#!/bin/bash\n\
+  printenv > /etc/environment\n\
+  service cron start\n\
+  bun run dev' > /start.sh && chmod +x /start.sh
+
+# Expose port
+EXPOSE 3334
+
+# Use the startup script
+CMD ["/start.sh"]
+

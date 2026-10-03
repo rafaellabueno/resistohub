@@ -1,0 +1,12 @@
+
+name = "mestrado"
+compatibility_date = "2024-10-30"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "nextjs/.vercel/output/static"
+
+[[env.production]]
+vars = { NEXT_PUBLIC_API_URL = "https://"}
+
+[[env.preview]]
+vars = { NEXT_PUBLIC_API_URL = "https://"}
+

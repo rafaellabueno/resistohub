@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Código de Verificação - ResistoHub</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .header {
+      background: linear-gradient(to right, #134e4a, #86efac);
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 8px 8px 0 0;
+    }
+    .header img {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+    .header h1 {
+      color: white;
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .header p {
+      color: #e6fffa;
+      font-size: 16px;
+      margin: 10px 0 0;
+    }
+    .content {
+      background-color: white;
+      padding: 30px;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .verification-code {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .code {
+      font-size: 32px;
+      font-weight: 700;
+      color: #134e4a;
+      letter-spacing: 5px;
+      padding: 15px 20px;
+      background-color: #f0fdfa;
+      border: 2px solid #14b8a6;
+      border-radius: 6px;
+      display: inline-block;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      font-size: 14px;
+    }
+    .button {
+      display: inline-block;
+      background-color: #14b8a6;
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #0f766e;
+    }
+    .info-block {
+      background-color: #f0fdfa;
+      border-left: 4px solid #14b8a6;
+      padding: 12px 20px;
+      margin: 20px 0;
+    }
+    .contact {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>ResistoHub</h1>
+      <p>Plataforma colaborativa de pesquisa em resistência antimicrobiana</p>
+    </div>
+    
+    <div class="content">
+      <h2>Olá, Pesquisador!</h2>
+      
+      <p>Obrigado por se cadastrar no ResistoHub. Para garantir a segurança da sua conta, precisamos verificar seu endereço de e-mail.</p>
+      
+      <div class="verification-code">
+        <p>Seu código de verificação é:</p>
+        <div class="code">{{code}}</div>
+      </div>
+      
+      <p>Digite este código na página de verificação para ativar sua conta.</p>
+      
+      <div class="info-block">
+        <p><strong>Nota:</strong> Se você não solicitou este código, por favor ignore este e-mail ou entre em contato com nosso suporte para reportar atividade suspeita.</p>
+      </div>
+      
+      <div class="contact">
+        <p>Precisa de ajuda? Entre em contato com nossa equipe:</p>
+        <p>📧 <a href="mailto:resistohub@ufcspa.edu.br">resistohub@ufcspa.edu.br</a></p>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>© 2025 ResistoHub. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</body>
+</html>

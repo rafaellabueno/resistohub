@@ -1,0 +1,43 @@
+FROM oven/bun:latest
+
+# Adicione o caminho do Bun ao PATH
+ENV PATH="/root/.bun/bin:${PATH}"
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y cron
+COPY hono/package.json hono/bun.lock ./hono/
+
+# Instala dependências para hono
+WORKDIR /app/hono
+RUN bun install
+
+COPY hono/drizzle.config.ts ./
+COPY hono/drizzle ./drizzle
+
+# Copia código da aplicação
+COPY hono/src ./src
+COPY hono/tsconfig.json .
+
+# Faz a build de produção
+RUN bun build ./src/index.ts --outdir ./out --minify --target bun
+
+RUN echo '#!/bin/bash\n\
+# Garante que as variáveis de ambiente do Docker estejam disponíveis\n\
+export $(cat /proc/1/environ | tr "\\0" "\\n" | xargs)\n\
+service cron start\n\
+echo "Aguardando banco de dados (db:3306)..."\n\
+# Tenta conectar na porta 3306 do host "db" até ter sucesso\n\
+while ! timeout 1 bash -c "cat < /dev/null > /dev/tcp/db/3306" 2>/dev/null; do\n\
+  sleep 2\n\
+done\n\
+echo "Banco detectado! Aplicando migrações estruturais (sem apagar dados)..."\n\
+# Executa a migração forçando o uso do host "db"\n\
+DATABASE_HOST=db npx drizzle-kit migrate --config drizzle.config.ts\n\
+echo "Migrações concluídas com sucesso. Iniciando servidor Hono..."\n\
+bun /app/hono/out/index.js --host 0.0.0.0 --port 3334' > /start.sh && chmod +x /start.sh
+
+EXPOSE 3334
+
+# Quando rodar, adiciona saída detalhada
+CMD ["/start.sh"]

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820">
+	<defs>
+		<marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto" markerUnits="strokeWidth">
+			<path d="M0,0 L10,5 L0,10 z" fill="#111" />
+		</marker>
+		<filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+			<feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.15" />
+		</filter>
+	</defs>
+
+	<!-- Background -->
+	<rect width="100%" height="100%" fill="transparent" />
+
+	<!-- Center circle -->
+	<g>
+		<circle cx="600" cy="360" r="140" fill="#ffffff" stroke="#2b2f36" stroke-width="4" filter="url(#shadow)" />
+		<text x="600" y="330" font-size="36" font-weight="700" fill="#0b2545" text-anchor="middle">Community</text>
+		<text x="600" y="365" font-size="14" fill="#666" text-anchor="middle">Forum · Discussion</text>
+		<text x="600" y="385" font-size="12" fill="#888" text-anchor="middle">Cross-module linking</text>
+	</g>
+
+	<!-- Outer boxes (centers) -->
+	<!-- Top-left -->
+	<g>
+		<rect x="280" y="150" width="240" height="100" rx="14" fill="#ffffff" stroke="#2081d6" stroke-width="4" />
+		<text x="400" y="190" font-size="20" font-weight="700" fill="#0b4f86" text-anchor="middle">Bioinformatics</text>
+		<text x="400" y="212" font-size="12" fill="#666" text-anchor="middle">Tools · Databases · Ratings</text>
+	</g>
+
+	<!-- Top-right -->
+	<g>
+		<rect x="680" y="110" width="240" height="100" rx="14" fill="#ffffff" stroke="#1fb38a" stroke-width="4" />
+		<text x="800" y="150" font-size="20" font-weight="700" fill="#0a5b43" text-anchor="middle">Workflows &amp; Methodologies</text>
+	</g>
+
+	<!-- Right -->
+	<g>
+		<rect x="880" y="300" width="220" height="100" rx="14" fill="#ffffff" stroke="#7b3fe4" stroke-width="4" />
+		<text x="990" y="340" font-size="20" font-weight="700" fill="#4a2580" text-anchor="middle">Protocols</text>
+		<text x="990" y="362" font-size="12" fill="#666" text-anchor="middle">Lab methods · PDF</text>
+	</g>
+
+	<!-- Bottom-right -->
+	<g>
+		<rect x="680" y="520" width="240" height="100" rx="14" fill="#ffffff" stroke="#f39c12" stroke-width="4" />
+		<text x="800" y="560" font-size="20" font-weight="700" fill="#8a4b00" text-anchor="middle">Surveillance</text>
+		<text x="800" y="582" font-size="12" fill="#666" text-anchor="middle">Alerts · Map · Severity</text>
+	</g>
+
+	<!-- Bottom-left -->
+	<g>
+		<rect x="100" y="520" width="240" height="100" rx="14" fill="#ffffff" stroke="#2fb86d" stroke-width="4" />
+		<text x="220" y="560" font-size="20" font-weight="700" fill="#0b6a3f" text-anchor="middle">Educational</text>
+		<text x="220" y="582" font-size="12" fill="#666" text-anchor="middle">PubMed · Topics · Literature</text>
+	</g>
+
+	<!-- Top (center) -->
+	<g>
+		<rect x="460" y="40" width="280" height="80" rx="14" fill="#ffffff" stroke="#9aa0a6" stroke-width="3" />
+		<text x="600" y="82" font-size="18" font-weight="700" fill="#385163" text-anchor="middle">Tools &amp; Plugins</text>
+	</g>
+
+	<!-- Arrows from boxes to circle -->
+	<!-- Top -->
+	<path d="M600,170 L600,220" stroke="#222" stroke-width="3" marker-end="url(#arrow)" fill="none" />
+
+	<!-- Top-right -->
+	<path d="M800,160 L730,250" stroke="#222" stroke-width="3" marker-end="url(#arrow)" fill="none" />
+
+	<!-- Right -->
+	<path d="M880,350 L740,370" stroke="#222" stroke-width="3" marker-end="url(#arrow)" fill="none" />
+
+	<!-- Bottom-right -->
+	<path d="M800,620 L700,460" stroke="#222" stroke-width="3" marker-end="url(#arrow)" fill="none" />
+
+	<!-- Bottom-left -->
+	<path d="M320,620 L490,460" stroke="#222" stroke-width="3" marker-end="url(#arrow)" fill="none" />
+
+	<!-- Top-left -->
+	<path d="M400,160 L470,250" stroke="#222" stroke-width="3" marker-end="url(#arrow)" fill="none" />
+
+	<!-- Legend (simple) -->
+	<g transform="translate(360,740)">
+		<rect x="-10" y="-24" width="480" height="48" rx="24" fill="#fff" stroke="#e6e6e6" />
+		<path d="M20,0 L80,0" stroke="#222" stroke-width="3" marker-end="url(#arrow)" />
+		<text x="100" y="6" font-size="12" fill="#444">Link to Community</text>
+	</g>
+
+</svg>

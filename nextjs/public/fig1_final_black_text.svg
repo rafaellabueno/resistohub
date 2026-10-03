@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1250" height="1650" viewBox="0 0 1250 1650" displayInline="False">
+<defs>
+<marker markerWidth="6" markerHeight="6" viewBox="-1 -1 6 6" orient="auto" markerUnits="strokeWidth" overflow="visible" id="d0">
+<path d="M0,0 L0,4 L4,2 z" fill="#000000" />
+</marker>
+<marker markerWidth="6" markerHeight="6" viewBox="-1 -1 6 6" orient="auto" markerUnits="strokeWidth" overflow="visible" id="d1">
+<path d="M0,0 L0,4 L4,2 z" fill="#000000" />
+</marker>
+<marker markerWidth="6" markerHeight="6" viewBox="-1 -1 6 6" orient="auto" markerUnits="strokeWidth" overflow="visible" id="d2">
+<path d="M0,0 L0,4 L4,2 z" fill="#000000" />
+</marker>
+<marker markerWidth="6" markerHeight="6" viewBox="-1 -1 6 6" orient="auto" markerUnits="strokeWidth" overflow="visible" id="d3">
+<path d="M0,0 L0,4 L4,2 z" fill="#000000" />
+</marker>
+<marker markerWidth="6" markerHeight="6" viewBox="-1 -1 6 6" orient="auto" markerUnits="strokeWidth" overflow="visible" id="d4">
+<path d="M0,0 L0,4 L4,2 z" fill="#000000" />
+</marker>
+<marker markerWidth="6" markerHeight="6" viewBox="-1 -1 6 6" orient="auto" markerUnits="strokeWidth" overflow="visible" id="d5">
+<path d="M0,0 L0,4 L4,2 z" fill="#000000" />
+</marker>
+</defs>
+<rect x="50" y="30" width="1000" height="180" rx="15" fill="#f0f7ff" stroke="#cbd5e1" />
+<text x="70" y="70" font-size="28" fill="#000000" font-style="italic" font-weight="bold">Specimen</text>
+<text x="980" y="70" font-size="22" fill="#000000" text-anchor="end">ACQUISITION</text>
+<text x="450" y="120" font-size="28" fill="#000000" font-weight="bold" text-anchor="end">Clinical Sample</text>
+<rect x="470" y="100" width="200" height="35" fill="none" stroke="#3b82f6" stroke-width="2" />
+<path d="M495,100 L495,135" stroke="#3b82f6" />
+<path d="M520,100 L520,135" stroke="#3b82f6" />
+<path d="M545,100 L545,135" stroke="#3b82f6" />
+<path d="M570,100 L570,135" stroke="#3b82f6" />
+<path d="M595,100 L595,135" stroke="#3b82f6" />
+<path d="M620,100 L620,135" stroke="#3b82f6" />
+<path d="M645,100 L645,135" stroke="#3b82f6" />
+<rect x="300" y="160" width="130" height="35" rx="17" fill="white" stroke="#cbd5e1" />
+<text x="365" y="185" font-size="16" fill="#000000" text-anchor="middle">Blood culture</text>
+<rect x="440" y="160" width="130" height="35" rx="17" fill="white" stroke="#cbd5e1" />
+<text x="505" y="185" font-size="16" fill="#000000" text-anchor="middle">Swabs</text>
+<rect x="580" y="160" width="130" height="35" rx="17" fill="white" stroke="#cbd5e1" />
+<text x="645" y="185" font-size="16" fill="#000000" text-anchor="middle">Urine</text>
+<rect x="720" y="160" width="130" height="35" rx="17" fill="white" stroke="#cbd5e1" />
+<text x="785" y="185" font-size="16" fill="#000000" text-anchor="middle">Tissue</text>
+<path d="M550,210 L550,270" stroke="#000000" stroke-width="3" marker-end="url(#d0)" />
+<circle cx="595" cy="240.0" r="18" fill="#000000" />
+<text x="595" y="246.0" font-size="16" fill="white" text-anchor="middle" font-weight="bold">1</text>
+<text x="620" y="248.0" font-size="22" fill="#000000" font-weight="bold">Pathogen identification</text>
+<rect x="50" y="270" width="1000" height="280" rx="15" fill="white" stroke="#cbd5e1" />
+<text x="70" y="310" font-size="28" fill="#000000" font-style="italic" font-weight="bold">Diagnostic layer</text>
+<circle cx="160" cy="380" r="30" fill="none" stroke="#22c55e" stroke-dasharray="2,2" />
+<circle cx="160" cy="380" r="18" fill="none" stroke="#22c55e" />
+<text x="160" y="455" font-size="22" fill="#000000" text-anchor="middle" font-weight="bold">Phenotypic AST</text>
+<text x="160" y="505" font-size="12" fill="#000000" text-anchor="middle">Antimicrobial Susceptibility Testing</text>
+<path d="M-12,-25 L12,-25 L12,12 Q12,30 0,30 Q-12,30 -12,12 z" fill="none" stroke="#eab308" stroke-width="2" transform="translate(400,380)" />
+<text x="400" y="455" font-size="22" fill="#000000" text-anchor="middle" font-weight="bold">PCR (multiplex)</text>
+<text x="400" y="505" font-size="12" fill="#000000" text-anchor="middle">Polymerase Chain Reaction</text>
+<path d="M-25,25 L-12,-12 L0,12 L12,-25 L25,25" fill="none" stroke="#3b82f6" stroke-width="2" transform="translate(640,380)" />
+<text x="640" y="455" font-size="22" fill="#000000" text-anchor="middle" font-weight="bold">MALDI-TOF MS</text>
+<text x="640" y="505" font-size="12" fill="#000000" text-anchor="middle">Matrix-Assisted Laser Desorption Ionization</text>
+<rect x="825" y="335" width="15" height="15" rx="4" fill="#ef4444" />
+<rect x="843" y="335" width="15" height="15" rx="4" fill="#22c55e" />
+<rect x="861" y="335" width="15" height="15" rx="4" fill="#3b82f6" />
+<rect x="879" y="335" width="15" height="15" rx="4" fill="#eab308" />
+<rect x="897" y="335" width="15" height="15" rx="4" fill="#a855f7" />
+<rect x="915" y="335" width="15" height="15" rx="4" fill="#1e293b" />
+<path d="M825,370 L825,370.0 L826,371.7932575896832 L827,373.5462424799361 L828,375.21958640933474 L829,376.7757096807404 L830,378.17966512028 L831,379.3999229155298 L832,380.40907870712823 L833,381.18446903160674 L834,381.7086802939199 L835,381.96993983924864 L836,381.96238034144704 L837,381.68617157053836 L838,381.14751658004644 L839,380.3585123997865 L840,379.33687836265506 L841,378.10555816661383 L842,376.692204608697 L843,375.12855856280595 L844,373.44973614811056 L845,371.6934400967184 L846,369.8991130315942 L847,368.107051670281 L848,366.35750184749884 L849,364.68975468046176 L850,363.14126417509186 L851,361.7468060897923 L852,360.53769694688566 L853,359.54109073103695 L854,358.7793690692986 L855,358.26963858801884 L856,358.02334673489344 L857,358.0460246939699 L858,358.3371631671782 L859,358.89022381206723 L860,359.6927860788809 L861,360.72682614932813 L862,361.96912171268485 L863,363.39177348882833 L864,364.9628317859217 L865,366.6470140216129 L866,368.4064970937698 L867,370.2017668058122 L868,371.99250527037947 L869,373.73849636216056 L870,375.4005288853674 L871,376.9412771726584 L872,378.3261393391572 L873,379.5240143661898 L874,380.5080005631146 L875,381.25599972129686 L876,381.7512133922344 L877,381.98252014449525 L878,381.9447253270914 L879,381.638677730141 L880,381.0712505228721 L881,380.2551868970594 L882,379.20881388240986 L883,377.9556307609862 L884,376.52378132399303 L885,374.9454218229011 L886,373.2559988093636 L887,371.4934530820848 L888,369.6973676182761 L889,367.90807862532426 L890,366.1657696765327 L891,364.50956927469616 L892,362.9766721102836 L893,361.6015037488775 L894,360.414947507188 L895,359.44365088034 L896,358.7094270965811 L897,358.2287652392021 L898,358.0124599372742 L899,358.06536894155215 L900,358.38630402986485 L901,358.9680576920239 L902,359.7975649949636 L903,360.8561969929716 L904,362.12017909364783 L905,363.5611249839948 L906,365.1466741258103 L907,366.8412185036104 L908,368.6067023038905 L909,370.40347656665364 L910,372.1911896155736 L911,373.9296932696523 L912,375.57994448481065 L913,377.1048821764867 L914,378.470259531696 L915,379.64541311861944 L916,380.60395152117565 L917,381.3243480333293 L918,381.79042410250014 L919,381.991712664975 L920,381.92369321359314 L921,381.58789331859134 L922,380.9918543216697 L923,380.1489619737152 L924,379.0781458196949 L925,377.8034540818854 L926,376.35351358864557 L927,374.7608868775674 L928,373.0613409110821 L929,371.29304382759335 L930,369.4957077673739 L931,367.70969702350976 L932,365.97512154689724 L933,364.3309361632184 L934,362.8140657315372" stroke="#a855f7" stroke-width="3" fill="none" />
+<text x="880" y="455" font-size="22" fill="#000000" text-anchor="middle" font-weight="bold">Whole Genome</text>
+<text x="880" y="480" font-size="22" fill="#000000" text-anchor="middle" font-weight="bold">Sequencing</text>
+<path d="M550,550 L550,610" stroke="#000000" stroke-width="3" marker-end="url(#d1)" />
+<circle cx="595" cy="580.0" r="18" fill="#000000" />
+<text x="595" y="586.0" font-size="16" fill="white" text-anchor="middle" font-weight="bold">2</text>
+<text x="620" y="588.0" font-size="22" fill="#000000" font-weight="bold">Raw genomic data generation</text>
+<rect x="50" y="610" width="1000" height="260" rx="15" fill="#f9f5ff" stroke="#e9d5ff" />
+<text x="70" y="650" font-size="28" fill="#000000" font-style="italic" font-weight="bold">Bioinformatics analysis</text>
+<ellipse cx="150" cy="690" rx="35" ry="12" fill="none" stroke="#a855f7" />
+<path d="M115,690 L115,725 Q150,735 185,725 L185,690" fill="none" stroke="#a855f7" />
+<path d="M115,702 L185,702" stroke="#a855f7" stroke-dasharray="2,2" />
+<text x="150" y="765" font-size="18" fill="#000000" text-anchor="middle" font-weight="bold">AMR Finder</text>
+<text x="150" y="795" font-size="16" fill="#000000" text-anchor="middle">Gene detection</text>
+<ellipse cx="350" cy="690" rx="35" ry="12" fill="none" stroke="#a855f7" />
+<path d="M315,690 L315,725 Q350,735 385,725 L385,690" fill="none" stroke="#a855f7" />
+<path d="M315,702 L385,702" stroke="#a855f7" stroke-dasharray="2,2" />
+<text x="350" y="765" font-size="18" fill="#000000" text-anchor="middle" font-weight="bold">CARD</text>
+<text x="350" y="795" font-size="16" fill="#000000" text-anchor="middle">Resistance DB</text>
+<ellipse cx="550" cy="690" rx="35" ry="12" fill="none" stroke="#a855f7" />
+<path d="M515,690 L515,725 Q550,735 585,725 L585,690" fill="none" stroke="#a855f7" />
+<path d="M515,702 L585,702" stroke="#a855f7" stroke-dasharray="2,2" />
+<text x="550" y="765" font-size="18" fill="#000000" text-anchor="middle" font-weight="bold">ResFinder</text>
+<text x="550" y="795" font-size="16" fill="#000000" text-anchor="middle">Acquired genes</text>
+<ellipse cx="750" cy="690" rx="35" ry="12" fill="none" stroke="#a855f7" />
+<path d="M715,690 L715,725 Q750,735 785,725 L785,690" fill="none" stroke="#a855f7" />
+<path d="M715,702 L785,702" stroke="#a855f7" stroke-dasharray="2,2" />
+<text x="750" y="765" font-size="18" fill="#000000" text-anchor="middle" font-weight="bold">ARG-ANNOT</text>
+<text x="750" y="795" font-size="16" fill="#000000" text-anchor="middle">Annotation</text>
+<ellipse cx="950" cy="690" rx="35" ry="12" fill="none" stroke="#a855f7" />
+<path d="M915,690 L915,725 Q950,735 985,725 L985,690" fill="none" stroke="#a855f7" />
+<path d="M915,702 L985,702" stroke="#a855f7" stroke-dasharray="2,2" />
+<text x="950" y="765" font-size="18" fill="#000000" text-anchor="middle" font-weight="bold">PointFinder</text>
+<text x="950" y="795" font-size="16" fill="#000000" text-anchor="middle">Point mutations</text>
+<text x="550" y="840" font-size="22" fill="#000000" text-anchor="middle" font-style="italic">Resistance gene calling - Variant annotation - Genotype-phenotype inference</text>
+<path d="M550,870 L550,930" stroke="#000000" stroke-width="3" marker-end="url(#d2)" />
+<circle cx="595" cy="900.0" r="18" fill="#000000" />
+<text x="595" y="906.0" font-size="16" fill="white" text-anchor="middle" font-weight="bold">3</text>
+<text x="620" y="908.0" font-size="22" fill="#000000" font-weight="bold">AMR gene identification</text>
+<rect x="50" y="930" width="1000" height="150" rx="15" fill="#fffbeb" stroke="#eab308" stroke-dasharray="5,5" />
+<path d="M-30,25 L30,25 L0,-30 z" fill="none" stroke="#eab308" stroke-width="3" transform="translate(120, 1005)" />
+<text x="120" y="1015" font-size="32" fill="#eab308" text-anchor="middle" font-weight="bold">!</text>
+<text x="200" y="975" font-size="28" fill="#000000" font-weight="bold">Interpretative Gap</text>
+<text x="200" y="1010" font-size="22" fill="#000000">Heterogeneous pipelines generate divergent outputs across laboratories,</text>
+<text x="200" y="1040" font-size="22" fill="#000000">impeding reproducibility, cross-site comparison and clinical translation.</text>
+<rect x="200" y="1050" width="300" height="25" rx="12" fill="white" stroke="#eab308" />
+<text x="350" y="1068" font-size="16" fill="#000000" text-anchor="middle">No standardized interpretation</text>
+<path d="M550,1080 L550,1140" stroke="#000000" stroke-width="3" marker-end="url(#d3)" />
+<circle cx="595" cy="1110.0" r="18" fill="#000000" />
+<text x="595" y="1116.0" font-size="16" fill="white" text-anchor="middle" font-weight="bold">4</text>
+<text x="620" y="1118.0" font-size="22" fill="#000000" font-weight="bold">Proposed solution ↓</text>
+<rect x="50" y="1140" width="1000" height="220" rx="15" fill="#f0fdf4" stroke="#bbf7d0" />
+<text x="70" y="1180" font-size="28" fill="#000000" font-style="italic" font-weight="bold">Collaborative digital ecosystem</text>
+<rect x="125" y="1200" width="50" height="40" rx="6" fill="none" stroke="#22c55e" stroke-width="2" />
+<path d="M135,1215 L165,1215" stroke="#22c55e" stroke-width="2" />
+<path d="M135,1230 L165,1230" stroke="#22c55e" stroke-width="2" />
+<text x="150" y="1290" font-size="16" fill="#000000" text-anchor="middle" font-weight="bold">Expert Discussion</text>
+<text x="150" y="1312" font-size="16" fill="#000000" text-anchor="middle" font-weight="bold">Forums</text>
+<rect x="320" y="1200" width="60" height="50" rx="6" fill="white" stroke="#22c55e" stroke-width="2" />
+<text x="350" y="1235" font-size="14" fill="#22c55e" text-anchor="middle">&gt; query_</text>
+<text x="350" y="1290" font-size="16" fill="#000000" text-anchor="middle" font-weight="bold">Bioinformatics</text>
+<text x="350" y="1312" font-size="16" fill="#000000" text-anchor="middle" font-weight="bold">Q&amp;A Communities</text>
+<rect x="530" y="1200" width="40" height="40" rx="4" fill="#22c55e" />
+<text x="550" y="1228" font-size="16" fill="white" text-anchor="middle" font-weight="bold">WF</text>
+<text x="550" y="1290" font-size="16" fill="#000000" text-anchor="middle" font-weight="bold">Workflow Sharing</text>
+<text x="550" y="1312" font-size="16" fill="#000000" text-anchor="middle" font-weight="bold">Platforms</text>
+<ellipse cx="750" cy="1205" rx="25" ry="10" fill="none" stroke="#22c55e" stroke-width="2" />
+<path d="M725,1205 L725,1235 Q750,1245 775,1235 L775,1205" fill="none" stroke="#22c55e" stroke-width="2" />
+<text x="750" y="1290" font-size="16" fill="#000000" text-anchor="middle" font-weight="bold">Open Reference</text>
+<text x="750" y="1312" font-size="16" fill="#000000" text-anchor="middle" font-weight="bold">Databases (FAIR)</text>
+<rect x="925" y="1195" width="50" height="60" fill="none" stroke="#22c55e" stroke-width="2" />
+<path d="M930,1207 L970,1207" stroke="#22c55e" />
+<path d="M930,1219 L970,1219" stroke="#22c55e" />
+<path d="M930,1231 L970,1231" stroke="#22c55e" />
+<path d="M930,1243 L970,1243" stroke="#22c55e" />
+<text x="950" y="1290" font-size="16" fill="#000000" text-anchor="middle" font-weight="bold">Educational Resources</text>
+<text x="950" y="1312" font-size="16" fill="#000000" text-anchor="middle" font-weight="bold">&amp; Documentation</text>
+<path d="M550,1360 L550,1420" stroke="#000000" stroke-width="3" marker-end="url(#d4)" />
+<circle cx="595" cy="1390.0" r="18" fill="#000000" />
+<text x="595" y="1396.0" font-size="16" fill="white" text-anchor="middle" font-weight="bold">5</text>
+<text x="620" y="1398.0" font-size="22" fill="#000000" font-weight="bold">Harmonized knowledge output</text>
+<rect x="50" y="1420" width="1000" height="120" rx="15" fill="#e0f2fe" stroke="#3b82f6" />
+<circle cx="100" cy="1480" r="30" fill="none" stroke="#3b82f6" stroke-width="3" />
+<path d="M85,60 L97,72 L115,50" fill="none" stroke="#3b82f6" stroke-width="4" transform="translate(0, 1420)" />
+<text x="150" y="1475" font-size="28" fill="#000000" font-weight="bold">Standardized Interpretation &amp; AMR Surveillance</text>
+<text x="150" y="1515" font-size="22" fill="#000000">Clinical decision support - Epidemiological monitoring - Evidence-based antibiotic stewardship</text>
+<path d="M1050,1480 H1130 V1250 H1050" stroke="#000000" stroke-width="4" fill="none" marker-end="url(#d5)" />
+<text x="1180" y="1365" font-size="28" fill="#000000" font-weight="bold" text-anchor="middle" transform="rotate(-90, 1180, 1365)">Clinical Feedback Loop</text>
+<text x="1210" y="1365" font-size="22" fill="#000000" text-anchor="middle" transform="rotate(-90, 1210, 1365)">(Clinical outcomes feedback curation)</text>
+</svg>

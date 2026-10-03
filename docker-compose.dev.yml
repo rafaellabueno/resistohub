@@ -1,0 +1,112 @@
+networks:
+  app-network:
+    driver: bridge
+
+services:
+  nextjs:
+    build:
+      context: ./nextjs/
+      dockerfile: ../Dockerfile.nextjs
+    ports:
+      - "4321:4321"
+    networks:
+      - app-network
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:3334/trpc
+      - DOMAIN=localhost
+    volumes:
+      - ./nextjs:/app/nextjs
+    working_dir: /app/nextjs
+    depends_on:
+      - hono
+
+  email-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    ports:
+      - "6000:6000"
+    restart: unless-stopped
+    volumes:
+      - ./emails:/app
+    networks:
+      - app-network
+
+  hono:
+    build:
+      context: .
+      dockerfile: Dockerfile.hono
+    ports:
+      - "3334:3334"
+    networks:
+      - app-network
+    volumes:
+      - ./hono:/app/hono
+      - /app/hono/node_modules
+    environment:
+      DATABASE_URI: ${DATABASE_URI}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_NAME: ${DATABASE_NAME}
+      FRONT_URL: ${FRONT_URL}
+      DOMAIN: ${DOMAIN}
+      COOKIE_NAME: ${COOKIE_NAME}
+      S3_ACCESS_KEY_ID: ${S3_ACCESS_KEY_ID}
+      S3_SECRET_ACCESS_KEY: ${S3_SECRET_ACCESS_KEY}
+      S3_ENDPOINT: ${S3_ENDPOINT}
+      S3_BUCKET: ${S3_BUCKET}
+      S3_PUBLIC_ENDPOINT: ${S3_PUBLIC_ENDPOINT}
+    depends_on:
+      - db
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    networks:
+      - app-network
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DATABASE_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DATABASE_NAME}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  minio:
+    image: minio/minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: ${S3_ACCESS_KEY_ID}
+      MINIO_ROOT_PASSWORD: ${S3_SECRET_ACCESS_KEY}
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio-data:/data
+    networks:
+      - app-network
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:9000/minio/health/ready" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  mc:
+    image: minio/mc
+    depends_on:
+      minio:
+        condition: service_healthy
+    entrypoint: >
+      sh -c " until mc alias set local http://minio:9000 ${S3_ACCESS_KEY_ID} ${S3_SECRET_ACCESS_KEY}; do # Connect to minio service by name
+        echo 'Waiting for MinIO to be ready...';
+        sleep 2;
+      done; echo 'Creating bucket: mestrado'; mc mb local/mestrado || echo 'Bucket already exists'; echo 'Initialization complete'; sleep 5 "
+    restart: "no"
+
+volumes:
+  mysql_data:
+  minio-data:

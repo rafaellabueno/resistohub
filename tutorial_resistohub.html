@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Manual rápido do ResistoHub</title>
+    <style>
+        :root {
+            --bg: #07111f;
+            --card: #ffffff;
+            --text: #0f172a;
+            --muted: #475569;
+            --accent: #14b8a6;
+            --border: #dbe3ef;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top left, rgba(20, 184, 166, 0.12), transparent 28%),
+                linear-gradient(180deg, #eff6ff 0%, #ffffff 42%, #f8fafc 100%);
+            line-height: 1.55;
+        }
+
+        .page {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+        }
+
+        .hero,
+        .section {
+            background: rgba(255, 255, 255, 0.94);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--bg), #0f766e 62%, #312e81 100%);
+            color: white;
+            padding: 38px;
+            margin-bottom: 18px;
+        }
+
+        h1,
+        h2,
+        h3,
+        p,
+        ul,
+        ol,
+        figure {
+            margin: 0;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 4vw, 3.1rem);
+            line-height: 1.05;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.02rem;
+            margin-bottom: 6px;
+        }
+
+        .hero p {
+            color: #dbeafe;
+            margin-bottom: 12px;
+            max-width: 78ch;
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .chip {
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #e2e8f0;
+            font-size: 0.92rem;
+        }
+
+        .section {
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+
+        .section p,
+        .section li {
+            color: #1e293b;
+        }
+
+        .section p {
+            margin-bottom: 12px;
+        }
+
+        .tag {
+            display: inline-flex;
+            padding: 7px 12px;
+            border-radius: 999px;
+            background: #ecfeff;
+            color: #155e75;
+            border: 1px solid #a5f3fc;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .note {
+            margin-top: 12px;
+            padding: 14px 16px;
+            border-left: 4px solid var(--accent);
+            border-radius: 12px;
+            background: #eff6ff;
+            color: #1e3a8a;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 16px;
+        }
+
+        .screenshot {
+            margin-top: 14px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            background: white;
+        }
+
+        .screenshot img {
+            display: block;
+            width: 100%;
+        }
+
+        .caption {
+            padding: 10px 14px 14px;
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        ul,
+        ol {
+            margin: 0 0 0 22px;
+            padding: 0;
+        }
+
+        li {
+            margin: 6px 0;
+        }
+
+        .footer {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.92rem;
+            margin-top: 18px;
+        }
+
+        @media (max-width: 760px) {
+            .page {
+                padding: 18px;
+            }
+
+            .hero {
+                padding: 26px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page">
+        <section class="hero">
+            <h1>Manual rápido do ResistoHub</h1>
+            <p>
+                Este manual explica o intuito de cada recurso da plataforma e como ele entra no uso prático.
+                A ideia é orientar quem pesquisa, quem trabalha em laboratório e quem quer colaborar com a comunidade.
+            </p>
+            <p>
+                A plataforma está em fase de avaliação e deve ser vista como uma demo. Por isso, a opinião da comunidade
+                é importante para ajustar o uso e melhorar o conteúdo.
+            </p>
+            <div class="chips">
+                <span class="chip">Bioinformática</span>
+                <span class="chip">Protocolos</span>
+                <span class="chip">Vigilância</span>
+                <span class="chip">Comunidade</span>
+                <span class="chip">Educação</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="tag">Visão geral</div>
+            <h2>1. A página de bioinformática</h2>
+            <p>
+                A rota <strong>/pt-br/bioinfo</strong> organiza ferramentas, bancos de dados, workflows e metodologias.
+                Ela serve para localizar recursos rapidamente e ligar cada item a uma discussão prática no fórum.
+            </p>
+            <figure class="screenshot">
+                <img src="tutorial-assets/bioinfo-card-plus.png"
+                    alt="Card de ferramenta com o botão de adicionar ao fórum" />
+                <figcaption>Recorte do card de ferramenta com o botão de ação no canto.</figcaption>
+            </figure>
+        </section>
+
+        <section class="section">
+            <h2>2. Para que serve cada área</h2>
+            <ul>
+                <li><strong>Bioinformática</strong>: encontrar ferramentas e bases de dados, avaliar recursos e abrir
+                    discussão.</li>
+                <li><strong>Workflows</strong>: mostrar uma sequência de análise com várias ferramentas.</li>
+                <li><strong>Casos de uso</strong>: descrever uma metodologia de trabalho.</li>
+                <li><strong>Protocolos</strong>: compartilhar procedimentos de laboratório e discutir validação.</li>
+                <li><strong>Vigilância</strong>: registrar e acompanhar alertas epidemiológicos.</li>
+                <li><strong>Comunidade</strong>: concentrar debates clínicos, técnicos, acadêmicos e resultados
+                    negativos.</li>
+                <li><strong>Educação</strong>: organizar leitura científica e artigos recentes.</li>
+            </ul>
+            <div class="note">
+                A lógica é simples: encontrar o recurso, entender o propósito e transformar isso em conversa,
+                colaboração ou referência para outras pessoas.
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>3. Como usar a plataforma</h2>
+            <ol>
+                <li>Abra a área que faz mais sentido para sua necessidade.</li>
+                <li>Use busca e filtros para chegar ao conteúdo desejado.</li>
+                <li>Leia os detalhes do recurso antes de comentar ou publicar.</li>
+                <li>Leve a discussão para o fórum quando houver dúvida, comparação ou complemento útil.</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>4. Bioinformática: ferramentas, workflows e casos de uso</h2>
+            <div class="grid">
+                <div class="box">
+                    <h3>Ferramentas</h3>
+                    <ul>
+                        <li>Pesquise por nome ou tags.</li>
+                        <li>Veja documentação, instalação e uso básico.</li>
+                        <li>Avalie e comente recursos que você realmente usa.</li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h3>Workflows e casos de uso</h3>
+                    <ul>
+                        <li><strong>Workflows</strong> mostram a sequência técnica da análise.</li>
+                        <li><strong>Casos de uso</strong> explicam uma metodologia de trabalho para outras pessoas
+                            reproduzirem ou adaptarem.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="note">Exemplo: Workflow = ferramenta A -> ferramenta B -> ferramenta C. Caso de uso = objetivo,
+                passos, ferramentas e resultado esperado.</div>
+            <figure class="screenshot">
+                <img src="tutorial-assets/bioinfo-workflow.png" alt="Workflow com ferramentas em sequência" />
+                <figcaption>Recorte de um workflow com ferramentas conectadas em sequência e botão de detalhes para
+                    explorar a metodologia.</figcaption>
+            </figure>
+        </section>
+
+        <section class="section">
+            <h2>5. Protocolos</h2>
+            <p>
+                A área de protocolos serve para consultar e divulgar procedimentos de laboratório. Ela permite usar o
+                conteúdo de forma prática, sem separar o protocolo da discussão sobre sua aplicação.
+            </p>
+            <ul>
+                <li>Pesquise por título, tags ou categoria.</li>
+                <li>Abra os detalhes para ver autores, instituição, DOI e informações técnicas.</li>
+                <li>Contribua com novos protocolos.</li>
+                <li>Discuta se o protocolo é padrão ouro, validado ou apenas uma rotina útil do laboratório.</li>
+            </ul>
+            <figure class="screenshot">
+                <img src="tutorial-assets/protocols-top.png"
+                    alt="Topo da página de protocolos com o botão de enviar protocolo" />
+                <figcaption>Recorte da área de protocolos com o botão de contribuição visível.</figcaption>
+            </figure>
+        </section>
+
+        <section class="section">
+            <h2>6. Vigilância</h2>
+            <p>
+                A área de vigilância organiza alertas epidemiológicos de resistência antimicrobiana. Ela ajuda a ver o
+                que está acontecendo, onde está acontecendo e como o evento pode ser tratado dentro da plataforma.
+            </p>
+            <ul>
+                <li>Filtros por país, estado, cidade, tipo de evento e severidade.</li>
+                <li>Mapa e lista de alertas para visualização rápida.</li>
+                <li>Formulário para publicar novos eventos quando necessário.</li>
+            </ul>
+            <figure class="screenshot">
+                <img src="tutorial-assets/surveillance-top.png"
+                    alt="Topo da página de vigilância com o botão de reportar alerta" />
+                <figcaption>Recorte da vigilância mostrando o botão de reportar alerta e os filtros principais.
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="section">
+            <h2>7. Comunidade</h2>
+            <p>
+                A comunidade é o ponto de conexão da plataforma. Tudo o que é útil pode gerar conversa: um protocolo,
+                um alerta, um artigo, uma ferramenta, um workflow ou um caso de uso.
+            </p>
+            <ul>
+                <li><strong>Discussão clínica</strong> para dúvidas e casos.</li>
+                <li><strong>Resultado negativo</strong> para registrar o que não funcionou e evitar retrabalho.</li>
+                <li><strong>Publicação</strong> para artigos, manuscritos e evidências científicas.</li>
+                <li><strong>Discussão geral</strong> para temas amplos da comunidade.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>8. Educação</h2>
+            <p>
+                A área educacional mantém a comunidade atualizada com artigos recentes e ajuda a transformar leitura em
+                discussão prática. O foco não é só mostrar o artigo, mas ligar a publicação ao que a comunidade pode
+                aprender com ela.
+            </p>
+            <ul>
+                <li>Pesquisar publicações recentes.</li>
+                <li>Ver título, autores, journal, ano e resumo.</li>
+                <li>Levar o artigo para a comunidade quando houver discussão útil.</li>
+            </ul>
+            <figure class="screenshot">
+                <img src="tutorial-assets/educational-top.png"
+                    alt="Topo da página educacional com a busca e os tópicos principais" />
+                <figcaption>Recorte da página educacional com a busca e os tópicos principais.</figcaption>
+            </figure>
+        </section>
+
+        <section class="section">
+            <h2>9. Fluxo recomendado</h2>
+            <ol>
+                <li>Escolha a área correta.</li>
+                <li>Use busca e filtros.</li>
+                <li>Abra o detalhe do recurso.</li>
+                <li>Discuta no fórum quando houver dúvida ou valor colaborativo.</li>
+                <li>Conecte o conteúdo com outro recurso do site sempre que fizer sentido.</li>
+            </ol>
+            <div class="note">Em resumo: encontre o recurso, entenda o propósito dele e transforme isso em conversa,
+                colaboração ou metodologia compartilhada.</div>
+        </section>
+
+        <p class="footer">Tutorial baseado na interface real da rota /pt-br/bioinfo do ResistoHub.</p>
+    </main>
+</body>
+
+</html>

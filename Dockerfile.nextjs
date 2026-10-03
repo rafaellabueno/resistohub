@@ -1,0 +1,11 @@
+# Use the official Node.js image as the base image
+FROM oven/bun:latest
+
+# Set the working directory inside the container
+WORKDIR /app/nextjs
+
+# Expose the port Next.js runs on
+EXPOSE 4321 
+
+# Start the Next.js development server
+CMD ["bun", "run", "dev"]

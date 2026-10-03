@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Novo Contato</title>
+  <style>
+    body, p, span, ul, li, td {
+      color: #333 !important;
+    }
+
+    a {
+      color: #333 !important;
+      text-decoration: none;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .important-warning {
+      color: #b61118 !important;
+    }
+  </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f9fafc; font-family: Arial, sans-serif;">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f9fafc;">
+    <tr>
+      <td align="center">
+        <table border="0" cellpadding="0" cellspacing="0" width="600" style="background-color: #ffffff; border: 1px solid #eaeaea; border-radius: 4px;">
+          <tr>
+            <td align="left" style="background-color: #f0f5fa; padding: 10px; border-bottom: 1px solid #d9e3f0;">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td style="font-size: 20px;">Nova Sugestão de Ferramenta</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="left" style="padding: 20px; font-size: 16px;">
+              <p>Uma nova sugestão de ferramenta foi adicionada à plataforma ResistoHub:</p>
+              <p>
+                <span>Ferramenta: {{tool}}</span><br />
+                <span>Deescrição: {{description}}</span><br />
+                <span>Site: {{website}}</span><br />
+                <span>Github: {{github}}</span><br />
+                <span>Contato: {{contact}}</span><br />
+                <span>Desenvolvedor: {{isDeveloper}}</span><br />
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

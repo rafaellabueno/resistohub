@@ -1,0 +1,21 @@
+{
+    email resistohub@ufcspa.edu.br
+}
+
+https:// {
+    reverse_proxy hono:3334
+    encode gzip
+    
+    # Basic security headers
+    header {
+        # Enable HTTP Strict Transport Security (HSTS)
+        Strict-Transport-Security "max-age=31536000; includeSubDomains"
+        # Disable FLoC tracking
+        Permissions-Policy "interest-cohort=()"
+        # Prevent clickjacking
+        X-Frame-Options "SAMEORIGIN"
+        # XSS protection
+        X-Content-Type-Options "nosniff"
+        X-XSS-Protection "1; mode=block"
+    }
+}

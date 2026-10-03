@@ -1,0 +1,58 @@
+# ==================================
+# 1. BUILDER STAGE (Usando Bun)
+# ==================================
+FROM oven/bun:1.1 AS builder
+
+WORKDIR /app
+
+# Copie apenas arquivos de configuração e dependências primeiro para otimizar o cache do Docker
+COPY nextjs/package.json nextjs/bun.lock ./
+COPY nextjs/next.config.js ./
+
+# Instale dependências usando Bun
+RUN bun install
+
+# Copie o código da sua aplicação
+COPY nextjs/ .
+
+# Faça a build de produção (Cria .next/standalone, .next/static, e a pasta public)
+RUN bun run build
+
+
+# ==================================
+# 2. RUNNER STAGE (Imagem final de produção, com PERMISSÕES e CAMINHO CORRIGIDOS)
+# ==================================
+FROM node:20-alpine AS runner
+
+# 🟢 CORREÇÃO DE PERMISSÕES 1: Cria um usuário não-root (nextjs)
+RUN addgroup --system --gid 1001 nextjs
+RUN adduser --system --uid 1001 nextjs
+
+# Definindo variáveis de ambiente
+ENV NODE_ENV production
+ENV PORT 4321 
+
+# Define o diretório de trabalho
+WORKDIR /app
+
+# Copie a pasta STANDALONE gerada na etapa de build
+# 🟢 PERMISSÃO: Aplica a propriedade do novo usuário
+COPY --from=builder --chown=nextjs:nextjs /app/.next/standalone ./
+
+# Copie arquivos estáticos (public)
+# 🟢 CORREÇÃO CRÍTICA DO CAMINHO: Garante que a pasta public seja copiada com as permissões corretas
+# O Next.js espera que essa pasta exista e seja legível no runtime.
+COPY --from=builder --chown=nextjs:nextjs /app/public ./public 
+
+# COPIE A PASTA .next/static
+# 🟢 PERMISSÃO: Aplica a propriedade do novo usuário
+COPY --from=builder --chown=nextjs:nextjs /app/.next/static ./.next/static 
+
+# Define o usuário para rodar o servidor
+USER nextjs
+
+# Exponha a porta
+EXPOSE 4321
+
+# Rode o servidor Next.js Standalone
+CMD ["node", "server.js"]

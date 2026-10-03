@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <!doctype html>
+    <html lang="pt-BR">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Tutorial de uso do ResistoHub</title>
+        <style>
+            :root {
+                color-scheme: light;
+                --bg: #0f172a;
+                --card: #ffffff;
+                --text: #0f172a;
+                --muted: #475569;
+                --accent: #2563eb;
+                --accent-2: #7c3aed;
+                --border: #e2e8f0;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+                background: linear-gradient(180deg, #eff6ff 0%, #ffffff 35%, #f8fafc 100%);
+                color: var(--text);
+                line-height: 1.6;
+            }
+
+            .page {
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 48px 28px 72px;
+            }
+
+            .hero {
+                background: linear-gradient(135deg, var(--bg), #1e293b 65%, #312e81 100%);
+                color: white;
+                border-radius: 24px;
+                padding: 40px;
+                box-shadow: 0 20px 60px rgba(15, 23, 42, 0.22);
+                margin-bottom: 28px;
+            }
+
+            .hero h1 {
+                margin: 0 0 10px;
+                font-size: 2.2rem;
+                line-height: 1.1;
+            }
+
+            .hero p {
+                margin: 0;
+                max-width: 70ch;
+                color: #dbeafe;
+                font-size: 1.02rem;
+            }
+
+            .meta {
+                display: flex;
+                gap: 12px;
+                flex-wrap: wrap;
+                margin-top: 22px;
+            }
+
+            .pill {
+                display: inline-block;
+                padding: 8px 14px;
+                border-radius: 999px;
+                background: rgba(255, 255, 255, 0.12);
+                border: 1px solid rgba(255, 255, 255, 0.16);
+                font-size: 0.92rem;
+            }
+
+            .section {
+                background: rgba(255, 255, 255, 0.82);
+                backdrop-filter: blur(12px);
+                border: 1px solid var(--border);
+                border-radius: 20px;
+                padding: 26px;
+                margin-bottom: 18px;
+                box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+            }
+
+            h2 {
+                margin: 0 0 12px;
+                font-size: 1.35rem;
+                color: #111827;
+            }
+
+            h3 {
+                margin: 18px 0 8px;
+                font-size: 1.05rem;
+                color: #0f172a;
+            }
+
+            p {
+                margin: 0 0 12px;
+                color: #1e293b;
+            }
+
+            ul,
+            ol {
+                margin: 10px 0 0 22px;
+                padding: 0;
+            }
+
+            li {
+                margin: 6px 0;
+            }
+
+            .tip {
+                border-left: 4px solid var(--accent);
+                background: #eff6ff;
+                padding: 14px 16px;
+                border-radius: 12px;
+                color: #1e3a8a;
+                margin-top: 14px;
+            }
+
+            .example {
+                background: #0f172a;
+                color: #e2e8f0;
+                border-radius: 16px;
+                padding: 16px;
+                overflow-x: auto;
+                font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+                font-size: 0.92rem;
+                margin-top: 12px;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 14px;
+            }
+
+            .box {
+                border: 1px solid var(--border);
+                border-radius: 16px;
+                padding: 14px;
+                background: #fff;
+            }
+
+            .footer {
+                margin-top: 24px;
+                text-align: center;
+                color: var(--muted);
+                font-size: 0.92rem;
+            }
+
+            @media print {
+                body {
+                    background: white;
+                }
+
+                .page {
+                    padding: 0;
+                    max-width: none;
+                }
+
+                .hero,
+                .section {
+                    box-shadow: none;
+                }
+
+                .section {
+                    break-inside: avoid;
+                }
+            }
+
+            @media (max-width: 720px) {
+                .page {
+                    padding: 18px;
+                }
+
+                .hero {
+                    padding: 28px;
+                }
+
+                .grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .hero h1 {
+                    font-size: 1.8rem;
+                }
+            }
+        </style>
+    </head>
+
+<body>
+    <h1>Tutorial de uso do ResistoHub</h1>
+    <p>Guia rápido para navegar no portal, acessar os módulos principais, publicar conteúdo e usar os recursos de
+        bioinformática, vigilância, protocolos e comunidade.</p>
+    <p>Guia rápido para aproveitar a ferramenta dentro do editor: pedir ajuda, editar arquivos, usar o contexto
+        <span class="pill">ResistoHub</span>
+        <span class="pill">Bioinformatics</span>
+        <span class="pill">Surveillance</span>
+        <span class="pill">Community</span>
+        <span class="pill">VS Code</span>
+        <span class="pill">GitHub Copilot Chat</span>
+        </div>
+        </section>
+
+    <section class="section">
+        <h2>1. O que esta ferramenta faz</h2>
+        <p>O Copilot Chat ajuda a entender código, propor mudanças, corrigir erros, escrever documentação e executar
+            tarefas no seu workspace com mais rapidez.</p>
+        <ul>
+            <li>Explica trechos de código e arquivos inteiros.</li>
+            <li>Propõe correções e refatorações.</li>
+            <li>Ajuda a criar componentes, testes e documentação.</li>
+            <li>Consulta o contexto do projeto aberto no VS Code.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>2. Como começar</h2>
+        <ol>
+            <li>Abra o VS Code e o projeto desejado.</li>
+            <li>Abra o painel do Copilot Chat.</li>
+            <li>Descreva o que você quer fazer com clareza.</li>
+            <li>Se possível, cite o arquivo, componente ou erro específico.</li>
+        </ol>
+        <div class="tip"><strong>Dica:</strong> pedidos curtos funcionam melhor quando o objetivo é simples; pedidos
+            com contexto funcionam melhor para mudanças maiores.</div>
+    </section>
+
+    <section class="section">
+        <h2>3. Como pedir algo de forma eficiente</h2>
+        <div class="grid">
+            <div class="box">
+                <h3>Bom exemplo</h3>
+                <div class="example">"Corrija este erro em nextjs/src/pages/bioinfo.tsx e preserve a estrutura
+                    atual."</div>
+            </div>
+            <div class="box">
+                <h3>Bom exemplo</h3>
+                <div class="example">"Adicione traduções para alerts em pt-br, es-es e en-us."</div>
+            </div>
+        </div>
+        <h3>Evite</h3>
+        <ul>
+            <li>Pedidos vagos como “arruma isso”.</li>
+            <li>Solicitar várias mudanças sem priorizar.</li>
+            <li>Esquecer de dizer em qual arquivo o problema está.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>4. Fluxo recomendado de uso</h2>
+        <ol>
+            <li>Explique o problema ou objetivo.</li>
+            <li>Peça a alteração no arquivo correto.</li>
+            <li>Revise a sugestão antes de aceitar.</li>
+            <li>Rode a validação do projeto.</li>
+            <li>Peça ajuste fino se houver erro residual.</li>
+        </ol>
+    </section>
+
+    <section class="section">
+        <h2>5. Exemplos práticos</h2>
+        <ul>
+            <li><strong>Correção:</strong> “Esse componente quebra quando a API retorna vazio. Corrija sem mudar o
+                layout.”</li>
+            <li><strong>Refatoração:</strong> “Extraia a lógica de filtros para um hook reutilizável.”</li>
+            <li><strong>Tradução:</strong> “Troque textos fixos por chaves de tradução em todos os idiomas.”</li>
+            <li><strong>Documentação:</strong> “Gere um tutorial curto de uso para esse recurso.”</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>6. Boas práticas</h2>
+        <ul>
+            <li>Peça mudanças pequenas e verificáveis.</li>
+            <li>Valide erros logo após editar.</li>
+            <li>Evite pedir reescritas desnecessárias.</li>
+            <li>Confirme os nomes de arquivos e funções.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>7. Quando algo der errado</h2>
+        <p>Se a sugestão não estiver boa, refine o pedido com mais contexto:</p>
+        <ul>
+            <li>arquivo exato;</li>
+            <li>erro exibido;</li>
+            <li>comportamento esperado;</li>
+            <li>restrições importantes, como manter a API atual.</li>
+        </ul>
+        <div class="tip"><strong>Exemplo:</strong> “O erro está em nextjs/src/pages/surveillance.tsx. Corrija sem
+            alterar os textos já traduzidos.”</div>
+    </section>
+
+    <section class="section">
+        <h2>8. Resumo rápido</h2>
+        <p>Use a ferramenta para descrever o objetivo, apontar o arquivo certo e revisar o resultado. Quanto mais
+            específico for o pedido, melhor será a resposta.</p>
+    </section>
+
+    <p class="footer">Gerado para uso local no VS Code.</p>
+    </main>
+</body>
+
+</html>

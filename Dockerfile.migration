@@ -1,0 +1,21 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+COPY hono/package.json ./hono/
+COPY hono/src/db ./hono/src/db
+COPY hono/drizzle.config.ts ./hono/drizzle.config.ts
+
+# Install dependencies for hono
+WORKDIR /app/hono
+RUN npm install drizzle-orm drizzle-kit
+
+# Copy application code
+COPY hono/src ./src
+
+# Copy the sleep script
+COPY hono/sleep.sh .
+RUN chmod +x sleep.sh
+
+# Entry point for migration
+CMD ["sh", "-c", "./sleep.sh && npm run db:push"]

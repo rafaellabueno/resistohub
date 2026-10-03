@@ -1,0 +1,36 @@
+{
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "db:generate": "npx drizzle-kit generate",
+    "db:migrate": "npx drizzle-kit migrate",
+    "db:push": "npx drizzle-kit push",
+    "db:pull": "npx drizzle-kit introspect",
+    "db:studio": "npx drizzle-kit studio",
+    "build": "bun build ./src/index.ts --outdir ./out --minify --target bun",
+    "start": "bun ./out/index.js"
+  },
+  "dependencies": {
+    "@hono/trpc-server": "^0.3.4",
+    "@hono/zod-validator": "^0.4.3",
+    "@oslojs/crypto": "^1.0.1",
+    "@oslojs/encoding": "^1.1.0",
+    "@planetscale/database": "1.6.0",
+    "@trpc/server": "10.43.1",
+    "bcryptjs": "^2.4.3",
+    "binance": "^2.13.2",
+    "drizzle-orm": "^0.40",
+    "hono": "^4.7.2",
+    "i18next": "^23.12.2",
+    "mysql2": "^3.10.1",
+    "otpauth": "^9.3.1",
+    "superjson": "^2.2.1",
+    "ua-parser-js": "^1.0.39",
+    "zod": "3.24.1",
+    "zod-i18n-map": "^2.27.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "2.4.2",
+    "@types/bun": "^1.2.4",
+    "drizzle-kit": "^0.30.5"
+  }
+}
